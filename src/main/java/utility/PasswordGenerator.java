@@ -5,9 +5,10 @@ import java.security.SecureRandom;
 public class PasswordGenerator {
     private static final String CHAR_LOWER ="abcdefghijklmnopqstuvwxyz";
     private static final String CHAR_UPPER =CHAR_LOWER.toUpperCase();
-    private static final String RANDOM_PASSWORD = CHAR_LOWER + CHAR_UPPER + SPECIAL_CHARACTERS + NUMBER;
     private static final String NUMBER = "0123456789";
     private static final String SPECIAL_CHARACTERS = "@#$%&";
+    private static final String RANDOM_PASSWORD = CHAR_LOWER + CHAR_UPPER + SPECIAL_CHARACTERS + NUMBER;
+
     private static final SecureRandom random = new SecureRandom();
     static StringBuilder stringBuilder =new StringBuilder(8);
 
