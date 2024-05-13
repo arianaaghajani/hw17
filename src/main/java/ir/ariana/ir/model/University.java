@@ -28,8 +28,15 @@ public class University extends BaseEntity<Long> {
     @Enumerated(EnumType.STRING)
     private UniversityType universityType;
 
+    public University(String city, String universityName, UniversityType universityType) {
+        this.city = city;
+        this.universityName = universityName;
+        this.universityType = universityType;
+    }
+
     public University(Long id){
         super(id);
     }
+
 
 }

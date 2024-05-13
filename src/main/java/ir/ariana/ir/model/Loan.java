@@ -21,7 +21,7 @@ import java.time.LocalDate;
 public class Loan extends BaseEntity<Long> {
     @Enumerated(EnumType.STRING)
     LoanType loanType;
-    LocalDate localDate;
+    LocalDate loanDate;
     Double amount;
     @ManyToOne
     Student student;

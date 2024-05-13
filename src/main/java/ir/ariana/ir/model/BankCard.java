@@ -6,12 +6,11 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.ManyToOne;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@AllArgsConstructor
+//@AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
@@ -26,4 +25,14 @@ public class BankCard extends BaseEntity<Long> {
 
     @ManyToOne
     private Student student;
+
+
+    public BankCard(String numberCard, String cvv2, String expirationDate,
+                    BankType bankType, Student student) {
+        this.numberCard = numberCard;
+        this.cvv2 = cvv2;
+        this.expirationDate = expirationDate;
+        this.bankType = bankType;
+        this.student = student;
+    }
 }

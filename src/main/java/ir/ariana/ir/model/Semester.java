@@ -31,12 +31,12 @@ public class Semester extends BaseEntity<Long> {
     @OneToMany(mappedBy = "semester")
     List<Loan> loan;
 
-    public Semester(Long aLong, Integer semesterNumber, LocalDate entriesYear,
-                    Student student, University university) {
-        super(aLong);
-        this.semesterNumber = semesterNumber;
-        this.entriesYear = entriesYear;
-        this.student = student;
-        this.university = university;
+    public Semester(int semesterNumber, LocalDate entriesYear, Student student,
+                    University university, Grade grade) {
+        this.semesterNumber=semesterNumber;
+        this.university=university;
+        this.grade=grade;
+        this.entriesYear=entriesYear;
+        this.student=student;
     }
 }
